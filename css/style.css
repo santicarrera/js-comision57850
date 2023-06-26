@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container-index{
+    display: grid;
+    grid-template-rows: 60px 365px 60px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+}
+
+.nombre-proyecto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.container-navbar{
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-between;
+}
+.navbar li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer{
+    background-color: red;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    border-radius: 7px;
+    border: 2px solid black;
+}
