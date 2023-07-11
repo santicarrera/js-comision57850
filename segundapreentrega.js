@@ -2,7 +2,7 @@
 alert("Bienvenido/a a la pagina de fans del millonario, si no esta registrado/a lo/la invitamos a hacerlo");
 
 class Usuarios {
-    constructor(email, clave, nombre){
+    constructor(email, clave, nombre) {
         this.email = email;
         this.clave = clave;
         this.nombre = nombre;
@@ -11,7 +11,7 @@ class Usuarios {
 
 let listaDeUsuarios = [];
 
-function ingresarUsuario(){
+function ingresarUsuario() {
     let email = prompt("ingrese un mail para registrarse");
     let clave = prompt("ingrese una contraseña");
     let nombre = prompt("Por ultimo, ingrese su nombre");
@@ -21,17 +21,18 @@ function ingresarUsuario(){
 }
 ingresarUsuario();
 
-function buscarUsuario(confirmarMail){
-    let chequearEail = prompt("ingrese su mail");
+function buscarUsuario(confirmarMail) {
+    let chequearEmail = prompt("ingrese su mail");
     return confirmarMail.email == chequearEmail;
 }
+
 let resultadoEmail = listaDeUsuarios.find(buscarUsuario);
-if (resultadoEmail == undefined){
+if (resultadoEmail == undefined) {
     alert("lo siento, no hemos encontrado su usuario");
-} else{
+} else {
     function buscarClave(confirmarClave){
-        let chequearClave = prompt("ingrese su contraseña");
-        return confirmarClave.clave == chequearClave;
+    let chequearClave = prompt("ingrese su contraseña");
+    return confirmarClave.clave == chequearClave;
     }
 }
 
@@ -92,11 +93,11 @@ if (numeroElegido === 1){
 } else{
     alert("eso no es un combo válido");
 
-    while (
+    while(
         numeroElegido !== 1 ||
         numeroElegido !== 2 ||
-        numeroElegido !== 3 ||
-    ){
+        numeroElegido !== 3 
+        ) {
         alert("tenemos tre combos de indumentaria para ofrecerte. Elija uno segun su numero");
         alert(combo1);
         alert(combo2);
@@ -131,8 +132,8 @@ if (numeroElegido === 1){
 while (
     numeroElegido === 1 ||
     numeroElegido === 2 ||
-    numeroElegido === 3 ||
-) {
+    numeroElegido === 3 
+    ) {
     alert("Muchas gracias por comprar con nosotros. Lo esperamos pronto");
     break;
 }
