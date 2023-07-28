@@ -7,37 +7,126 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container-index">
-        <div class="header">
-            <div class="nombre-proyecto">
-                <h1>INICIO JS</h1>
+    <header>
+        <h1>Tienda</h1>
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-cart"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                />
+            </svg>
+            <div class="count-products">
+                <span id="contador-productos">0</span>
             </div>
-            <div class="container-navbar">
-                <nav>
-                    <ul class="navbar">
-                        <li><a href="">INICIO</a></li>
-                        <li><a href="">RIVER</a></li>
-                        <li><a href="">HISTORIA</a></li>
-                        <li><a href="">NOSOTROS</a></li>
-                    </ul>
-                </nav>
+            </div>
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Camiseta Titular 22/23</p>
+                            <span class="precio-producto-carrito">$28000</span>
+                        </div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="icon-close"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$28000</span>
+                </div>
             </div>
         </div>
-        <!-- fin del header -->
-        <!-- inicio del main -->
-        <div class="main">
-            <img src="./assets/Escudo River 2022 (1).jpg" alt="">
+    </header>
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img
+                    src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5799d578d67440e1bcb3af0800f34dd2_9366/Camiseta_de_Juego_Titular_River_Plate_22-23_Blanco_GB7591_01_laydown.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Camiseta Titular 22/23</h2>
+                <p class="price">$28000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
         </div>
-        <!-- fin del main -->
-        <!-- inicio del footer -->
-        <div class="footer">
-            <div class="redes-sociales">
-                <a href="https://www.instagram.com/" target="_blank"><button class="btn">MilloFans</button></a>
-                <a href="https://twitter.com/" target="_blank"><button class="btn">@MilloFans1</button></a>
-                <a href="https://www.facebook.com/" target="_blank"><button class="btn">MilloFansOficial</button></a>
+        <div class="item">
+            <figure>
+                <img
+                    src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2e5694c396c74bcfa0104e7476fd19ba_9366/Camiseta_Tercer_Uniforme_River_Plate_23-24_Ninos_Negro_HT9873_01_laydown.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Camiseta Alternativa 22/23</h2>
+                <p class="price">$26000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/36bb2f547c3c405d9401af01014a31bc_9366/Camiseta_de_juego_alternativa_River_Plate_22-23_Rojo_GB7587_01_laydown.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Camiseta Authentic Alternativa 22/23</h2>
+                <p class="price">$26000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="https://tiendariver.vteximg.com.br/arquivos/ids/170305-500-500/HC1036_1.jpg?v=638212387370570000"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Campera De Invierno River Plate Condivo 22</h2>
+                <p class="price">$55000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="https://tiendariver.vteximg.com.br/arquivos/ids/169831-500-500/HC1042_FR_Torso_ecom.jpg?v=638092226956400000"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Buzo Ligero De Entrenamiento Condivo 22 River Plate</h2>
+                <p class="price">$32000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
         </div>
     </div>
-    <script src="segundapreentrega.js"></script>
+    <script src="proyecto.js"></script>
 </body>
 </html>
