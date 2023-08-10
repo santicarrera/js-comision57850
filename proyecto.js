@@ -25,7 +25,7 @@ productList.addEventListener('click', e => {
             quantity: 1,
             title: product.querySelector('h2').textContent,
             price: product.querySelector('p').textContent,
-        };
+        }
 
         const exits = allProducts.some(product => product.title === infoProduct.title);
 
@@ -60,7 +60,7 @@ rowProduct.addEventListener('click', (e) => {
         console.log(allProducts);
         showHTML();
     }
-})
+});
 
 //funcion para mostrar html
 const showHTML = () => {
@@ -116,5 +116,33 @@ const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(allProducts));
 };
 
+
+// Operadores Avanzados -
+const prices = allProducts.map(product => parseFloat(product.price.slice(1)));
+const totalPrice = prices.reduce((total, price) => total + price, 0);
+console.log("Total Price:", totalPrice);
+
+// Promesas y Asincronía 
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = { name: "John", age: 30 };
+            resolve(data);
+        }, 1000);
+    });
+}
+
+// AJAX y Fetch 
+const btnFetch = document.getElementById("btnFetch");
+btnFetch.addEventListener("click", () => {
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+        .then(response => response.json())
+        .then(data => {
+            console.log("Fetched data:", data);
+        })
+    .catch(error => {
+        console.error("Error fetching data:", error);
+    });
+});
 
 
